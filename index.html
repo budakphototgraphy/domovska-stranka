@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#171717">
+  <title>Budák Photography | Objednávka focení</title>
+  <style>
+    :root { color-scheme: dark; --bg:#111; --panel:#1c1c1c; --muted:#b9b9b9; --line:#383838; --accent:#e7d7b5; }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:Arial,Helvetica,sans-serif; background:linear-gradient(145deg,#101010,#24211d); color:#f5f2ec; }
+    header { padding:52px 20px 38px; text-align:center; border-bottom:1px solid var(--line); }
+    .brand { letter-spacing:.22em; font-size:clamp(24px,5vw,38px); font-weight:700; }
+    header p { color:var(--muted); letter-spacing:.12em; text-transform:uppercase; font-size:12px; }
+    main { width:min(760px,calc(100% - 32px)); margin:36px auto 60px; }
+    .intro,.form-card { background:rgba(28,28,28,.96); border:1px solid var(--line); border-radius:18px; padding:clamp(22px,5vw,36px); }
+    .intro { margin-bottom:20px; }
+    h1 { margin:0 0 12px; font-size:clamp(25px,5vw,34px); }
+    h2 { margin:0 0 18px; font-size:20px; }
+    p { line-height:1.65; color:#d5d1ca; }
+    .price { margin:22px 0 8px; color:var(--accent); font-size:clamp(30px,7vw,42px); font-weight:700; }
+    .sub { color:var(--muted); font-size:13px; }
+    .field { margin:17px 0; }
+    label { display:block; margin-bottom:8px; font-weight:600; font-size:14px; }
+    input,select,textarea { width:100%; padding:13px 14px; border:1px solid #4a4a4a; border-radius:9px; background:#121212; color:#fff; font:inherit; }
+    textarea { min-height:100px; resize:vertical; }
+    input:focus,select:focus,textarea:focus { outline:2px solid var(--accent); outline-offset:1px; }
+    .checks { display:grid; gap:11px; }
+    .checks label { display:flex; align-items:center; gap:10px; font-weight:400; color:#e2ded7; }
+    .checks input { width:auto; accent-color:#d9c49c; }
+    button { width:100%; margin-top:12px; padding:15px; border:0; border-radius:9px; background:var(--accent); color:#171717; font-size:16px; font-weight:700; cursor:pointer; }
+    button:hover { filter:brightness(1.07); }
+    footer { text-align:center; color:#999; font-size:12px; padding:0 20px 35px; }
+    .notice { font-size:12px; color:#aaa; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">BUDÁK PHOTOGRAPHY</div>
+    <p>Fotografie s osobitým přístupem</p>
+  </header>
+  <main>
+    <section class="intro">
+      <h1>Fotografování králíčků</h1>
+      <p>Objednávkový formulář pro naše domluvené fotografování. Vyplňte prosím základní informace a odešlete objednávku. Následně se Vám ozveme s potvrzením podrobností.</p>
+      <div class="price">20 999 Kč</div>
+      <div class="sub">Uvedená cena za fotografický balíček</div>
+    </section>
+
+    <section class="form-card">
+      <h2>Objednávkový formulář</h2>
+      <form action="https://formsubmit.co/voskare@seznam.cz" method="POST">
+        <input type="hidden" name="_subject" value="Nová objednávka – Budák Photography">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="true">
+        <input type="hidden" name="_next" value="https://formsubmit.co/thanks">
+
+        <div class="field">
+          <label for="name">Jméno a příjmení</label>
+          <input id="name" name="Jméno a příjmení" autocomplete="name" required>
+        </div>
+        <div class="field">
+          <label for="email">E-mail</label>
+          <input id="email" name="E-mail" type="email" autocomplete="email" required>
+        </div>
+        <div class="field">
+          <label for="date">Preferovaný termín fotografování</label>
+          <input id="date" name="Preferovaný termín" type="date">
+        </div>
+        <div class="field">
+          <label for="place">Místo fotografování</label>
+          <input id="place" name="Místo fotografování" placeholder="Např. obec nebo zahrada">
+        </div>
+        <div class="field">
+          <label for="count">Počet fotografovaných králíčků</label>
+          <select id="count" name="Počet králíčků" required>
+            <option value="">Vyberte počet</option>
+            <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6 a více</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Jaké fotografie byste si přála?</label>
+          <div class="checks">
+            <label><input type="checkbox" name="Typ fotografií[]" value="Individuální portréty"> Individuální portréty</label>
+            <label><input type="checkbox" name="Typ fotografií[]" value="Společné fotografie"> Společné fotografie</label>
+            <label><input type="checkbox" name="Typ fotografií[]" value="Fotografie v přirozeném prostředí"> Fotografie v přirozeném prostředí</label>
+            <label><input type="checkbox" name="Typ fotografií[]" value="Detailní fotografie"> Detailní fotografie</label>
+          </div>
+        </div>
+        <div class="field">
+          <label for="notes">Další přání nebo poznámky</label>
+          <textarea id="notes" name="Další poznámky" placeholder="Zde můžete uvést další informace k fotografování."></textarea>
+        </div>
+        <div class="field">
+          <label><input type="checkbox" name="Potvrzení ceny 20 999 Kč" value="Ano, beru na vědomí" required style="width:auto;margin-right:8px"> Beru na vědomí uvedenou cenu 20 999 Kč.</label>
+        </div>
+        <button type="submit">Odeslat objednávku</button>
+        <p class="notice">Odesláním formuláře budou vyplněné údaje zaslány fotografovi na uvedenou kontaktní adresu.</p>
+      </form>
+    </section>
+  </main>
+  <footer>© Budák Photography</footer>
+</body>
+</html>
