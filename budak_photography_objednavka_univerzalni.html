@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="cs"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#171717"><title>BUDÁK PHOTOGRAPHY | Objednávka</title>
+<style>
+:root{color-scheme:dark;--panel:#1d1d1d;--muted:#bdb8ae;--line:#414141;--gold:#e7d7b5}*{box-sizing:border-box}body{margin:0;background:linear-gradient(145deg,#101010,#29251f);color:#f5f2ec;font-family:Arial,sans-serif}header{text-align:center;padding:45px 18px 32px;border-bottom:1px solid var(--line)}.brand{font-size:clamp(25px,6vw,39px);font-weight:700;letter-spacing:.18em}header p{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}main{width:min(780px,calc(100% - 30px));margin:30px auto 55px}.card{background:var(--panel);border:1px solid var(--line);border-radius:17px;padding:clamp(20px,5vw,34px);margin-bottom:18px}h1{font-size:clamp(25px,5vw,34px);margin:0 0 12px}h2{font-size:20px;margin:0 0 18px}p{color:#d6d1c8;line-height:1.6}.muted,.small{color:var(--muted);font-size:12px}.field{margin:17px 0}label{display:block;font-weight:600;font-size:14px;margin-bottom:8px}input,select,textarea{width:100%;padding:13px;border:1px solid #505050;border-radius:9px;background:#121212;color:#fff;font:inherit}textarea{min-height:95px;resize:vertical}input:focus,select:focus,textarea:focus{outline:2px solid var(--gold);outline-offset:1px}.options{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px}.choice{display:flex;align-items:center;gap:9px;padding:12px;border:1px solid var(--line);border-radius:9px;color:#e9e4dc;font-weight:400}.choice input{width:auto;accent-color:#d9c49c}.hidden{display:none}button{width:100%;padding:15px;border:0;border-radius:9px;background:var(--gold);color:#171717;font-size:16px;font-weight:700;cursor:pointer;margin-top:10px}footer{text-align:center;color:#999;font-size:12px;padding:0 15px 30px}
+</style></head><body>
+<header><div class="brand">BUDÁK PHOTOGRAPHY</div><p>Objednávka fotografických služeb</p></header>
+<main>
+<section class="card"><h1>Objednávkový formulář</h1><p>Děkujeme za zájem o fotografické služby BUDÁK PHOTOGRAPHY. Vyplňte prosím následující formulář, abychom mohli připravit nabídku podle Vašich představ. Po odeslání Vás budeme kontaktovat a domluvíme podrobnosti.</p><p class="muted">Nezávazná poptávka – konečná cena bude upřesněna podle rozsahu zakázky.</p></section>
+<form class="card" action="https://formsubmit.co/voskare@seznam.cz" method="POST">
+<input type="hidden" name="_subject" value="Nová objednávka – BUDÁK PHOTOGRAPHY"><input type="hidden" name="_template" value="table">
+<h2>1. Kontaktní údaje</h2>
+<div class="field"><label for="name">Jméno a příjmení *</label><input id="name" name="Jméno a příjmení" autocomplete="name" required></div>
+<div class="field"><label for="email">E-mail *</label><input id="email" name="E-mail" type="email" autocomplete="email" required></div>
+<div class="field"><label for="phone">Telefonní číslo</label><input id="phone" name="Telefon" type="tel" autocomplete="tel"></div>
+<h2 style="margin-top:30px">2. Co si přejete fotografovat?</h2>
+<div class="field"><label for="subject">Předmět fotografování *</label><select id="subject" name="Předmět fotografování" required><option value="">Vyberte možnost</option><option>Portréty / osoby</option><option>Zvířata</option><option>Produkty / předměty</option><option>Příroda / krajina</option><option>Událost / oslava</option><option>Nemovitost / interiér</option><option>Jiné</option></select></div>
+<div class="field"><label for="description">Popište, co přesně chcete fotografovat *</label><textarea id="description" name="Popis zakázky" required placeholder="Např. portrétní fotografie, rodinné focení, fotografie domácího mazlíčka…"></textarea></div>
+<div class="field"><label>Budou součástí fotografování osoby?</label><div class="options"><label class="choice"><input type="radio" name="Fotografování osob" value="Ano" data-toggle="people" required> Ano</label><label class="choice"><input type="radio" name="Fotografování osob" value="Ne" data-toggle="people" required> Ne</label></div></div>
+<div class="field hidden" id="people-count"><label for="people">Počet osob</label><input id="people" name="Počet osob" type="number" min="1" max="100" placeholder="Zadejte počet"></div>
+<div class="field"><label>Budou součástí fotografování zvířata?</label><div class="options"><label class="choice"><input type="radio" name="Fotografování zvířat" value="Ano" data-toggle="animals" required> Ano</label><label class="choice"><input type="radio" name="Fotografování zvířat" value="Ne" data-toggle="animals" required> Ne</label></div></div>
+<div class="field hidden" id="animals-count"><label for="animals">Počet zvířat</label><input id="animals" name="Počet zvířat" type="number" min="1" max="100" placeholder="Zadejte počet"></div>
+<div class="field hidden" id="animals-kind"><label for="kind">O jaká zvířata se jedná?</label><input id="kind" name="Druh zvířat" placeholder="Např. psi, kočky, králíci…"></div>
+<h2 style="margin-top:30px">3. Termín a místo</h2>
+<div class="field"><label for="date">Preferovaný termín fotografování</label><input id="date" name="Preferovaný termín" type="date"></div>
+<div class="field"><label for="place">Místo fotografování / obec</label><input id="place" name="Místo fotografování" placeholder="Uveďte preferované místo"></div>
+<div class="field"><label for="style">Preferovaný styl fotografií</label><select id="style" name="Styl fotografií"><option value="">Bez preference</option><option>Přirozený / dokumentární</option><option>Portrétní / aranžovaný</option><option>Umělecký / kreativní</option><option>Produktový / reklamní</option><option>Jiný</option></select></div>
+<h2 style="margin-top:30px">4. Další informace</h2>
+<div class="field"><label for="amount">Přibližný počet požadovaných výsledných fotografií</label><input id="amount" name="Počet výsledných fotografií" type="number" min="1" placeholder="Např. 10"></div>
+<div class="field"><label for="notes">Další přání, požadavky nebo poznámky</label><textarea id="notes" name="Další poznámky" placeholder="Vše, co bychom měli předem vědět…"></textarea></div>
+<div class="field"><label class="choice" style="align-items:flex-start"><input type="checkbox" name="Souhlas s kontaktováním" value="Ano" required> Souhlasím s tím, abych byl/a kontaktován/a ohledně této poptávky. *</label></div>
+<button type="submit">Odeslat objednávku</button><p class="small">Poptávka bude zaslána na voskare@seznam.cz. Odeslání formuláře samo o sobě nepotvrzuje termín ani nevytváří závaznou objednávku.</p>
+</form></main><footer>© BUDÁK PHOTOGRAPHY</footer>
+<script>
+function toggle(group,ids,inputIds){const radios=document.querySelectorAll('input[data-toggle="'+group+'"]'),panels=ids.map(x=>document.getElementById(x)),inputs=inputIds.map(x=>document.getElementById(x));function update(){const s=document.querySelector('input[data-toggle="'+group+'"]:checked'),show=!!s&&s.value==='Ano';panels.forEach(p=>p.classList.toggle('hidden',!show));inputs.forEach(i=>{i.required=show;if(!show)i.value='';});}radios.forEach(r=>r.addEventListener('change',update));update();}
+toggle('people',['people-count'],['people']);toggle('animals',['animals-count','animals-kind'],['animals','kind']);
+</script></body></html>
